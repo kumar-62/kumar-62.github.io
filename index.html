@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Welcome – Ratna Kumar</title>
+  <style>
+    :root {
+      --primary-color: #2c3e50;
+      --accent-color: #3498db;
+      --text-color: #333;
+      --bg-color: #f9f9f9;
+      --font-stack: 'Segoe UI', Tahoma, sans-serif;
+    }
+    body {
+      margin: 0;
+      font-family: var(--font-stack);
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+    header, footer {
+      background: var(--primary-color);
+      color: white;
+      padding: 1rem;
+      text-align: center;
+    }
+    main {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem;
+    }
+    .card {
+      background: white;
+      padding: 2rem 3rem;
+      border-radius: 8px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+      text-align: center;
+      max-width: 400px;
+      width: 100%;
+    }
+    .card h1 {
+      color: var(--accent-color);
+      margin-bottom: 1rem;
+    }
+    .card p {
+      font-size: 1.1rem;
+      margin: 0;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h2>Express Car Care & Accessories</h2>
+  </header>
+
+  <main>
+    <div class="card">
+      <h1>Hi 👋</h1>
+      <p>This page is owned by <strong>Ratna Kumar</strong>.</p>
+    </div>
+  </main>
+
+  <footer>
+    &copy; <span id="year"></span> Ratna Kumar. All rights reserved.
+  </footer>
+
+  <script>
+    // Set the current year automatically
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
