@@ -7,6 +7,8 @@
   <meta name="description" content="Foam wash, interior detailing, PPF, ceramic coating, and car accessories in Narsingi, Hyderabad." />
   <meta name="theme-color" content="#0b0f14">
   <link rel="icon" type="image/png" href="favicon.png">
+  <!-- Fonts: Bebas Neue for headings (logo-like), Inter for body -->
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
   <link rel="preload" href="styles.css" as="style">
   <link rel="stylesheet" href="styles.css" />
 </head>
@@ -14,7 +16,9 @@
   <header class="site-header">
     <div class="container">
       <a class="logo" href="/" aria-label="Express Car Care & Accessories">
-        <img src="logo-header.png" alt="Express logo" height="44">
+        <!-- Make the logo bigger; adjust via CSS too -->
+        <img src="logo-header.png" alt="Express logo" height="64" width="auto" loading="eager" decoding="async">
+        <span class="wordmark">Express Car Care</span>
       </a>
       <nav class="nav" aria-label="Primary">
         <a href="#services">Services</a>
@@ -31,7 +35,7 @@
     <section class="hero">
       <div class="container hero-grid">
         <div>
-          <h1>Express Car Care & Accessories</h1>
+          <h1><span class="brand">EXPRESS</span> Car Care & Accessories</h1>
           <p class="lead">Foam Wash • Interior Detailing • PPF • Ceramic Coating • Accessories</p>
           <ul class="badges">
             <li>Hydraulic-lift underbody wash</li>
@@ -86,12 +90,13 @@
       <div class="container">
         <h2>Gallery</h2>
         <div class="grid-3 thumbs">
-          <img src="gallery1.jpg" alt="Shop exterior and signboard">
-          <img src="gallery2.jpg" alt="Accessories counter and shelves">
-          <img src="gallery3.jpg" alt="Interior accessories display">
-          <img src="gallery4.jpg" alt="Detailing bay with red car">
+          <!-- Ensure these filenames exist in the root with exact casing -->
+          <img src="gallery1.jpg" alt="Shop exterior and signboard" loading="lazy" decoding="async">
+          <img src="gallery2.jpg" alt="Accessories counter and shelves" loading="lazy" decoding="async">
+          <img src="gallery3.jpg" alt="Interior accessories display" loading="lazy" decoding="async">
+          <img src="gallery4.jpg" alt="Detailing bay with red car" loading="lazy" decoding="async">
         </div>
-        <p class="muted">Replace files in <code>/images</code> using the same names to update this gallery.</p>
+        <p class="muted">To update: replace <code>gallery1.jpg</code>–<code>gallery4.jpg</code> in the site root.</p>
       </div>
     </section>
 
