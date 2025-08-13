@@ -4,19 +4,23 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Express Car Care & Accessories — Narsingi, Hyderabad</title>
-  <meta name="description" content="Premium foam wash, interior detailing, PPF, ceramic coating, and car accessories in Narsingi, Hyderabad." />
-  <meta name="theme-color" content="#0ea5e9">
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🚗</text></svg>">
+  <meta name="description" content="Foam wash, interior detailing, PPF, ceramic coating, and car accessories in Narsingi, Hyderabad." />
+  <meta name="theme-color" content="#0b0f14">
+  <link rel="icon" type="image/png" href="images/favicon.png">
+  <link rel="preload" href="styles.css" as="style">
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
   <header class="site-header">
     <div class="container">
-      <a class="logo" href="#">Express Car Care</a>
+      <a class="logo" href="/" aria-label="Express Car Care & Accessories">
+        <img src="images/logo-header.png" alt="Express logo" height="44">
+      </a>
       <nav class="nav" aria-label="Primary">
         <a href="#services">Services</a>
         <a href="#pricing">Pricing</a>
         <a href="#gallery">Gallery</a>
+        <a href="#streetview">360° View</a>
         <a href="#contact" class="btn">Call / WhatsApp</a>
       </nav>
       <button class="menu" aria-label="Toggle menu" onclick="toggleMenu()">☰</button>
@@ -30,32 +34,23 @@
           <h1>Express Car Care & Accessories</h1>
           <p class="lead">Foam Wash • Interior Detailing • PPF • Ceramic Coating • Accessories</p>
           <ul class="badges">
-            <li>Hydraulic lift foam wash</li>
-            <li>Interior deep clean</li>
-            <li>Paint Protection Film</li>
-            <li>9H ceramic coating</li>
-            <li>Seat covers & more</li>
+            <li>Hydraulic-lift underbody wash</li>
+            <li>Interior deep clean & steam</li>
+            <li>Self-healing PPF</li>
+            <li>9H ceramic protection</li>
+            <li>Seat covers & audio</li>
           </ul>
           <div class="cta">
-            <!-- Update numbers if needed -->
             <a class="btn" href="tel:+918885091293">Call +91 88850 91293</a>
             <a class="btn ghost" href="https://wa.me/918885091293" target="_blank" rel="noopener">WhatsApp</a>
           </div>
           <p class="hours">Open daily: 10:00–21:00</p>
         </div>
-
         <div class="card">
           <h2>Visit Us</h2>
-          <p>
-            Plot No. 41, Vivekanand Nagar, Narsingi<br>
-            Hyderabad, Telangana 500075
-          </p>
-          <!-- Replace with your Google Maps link if different -->
+          <p>Plot No. 41, Vivekanand Nagar, Narsingi<br>Hyderabad, Telangana 500075</p>
           <a class="btn full" href="https://maps.google.com" target="_blank" rel="noopener">Get Directions</a>
-          <div class="mini">
-            <a href="tel:+918885091293">+91 88850 91293</a> ·
-            <a href="tel:+918008645679">+91 80086 45679</a>
-          </div>
+          <p class="mini">Phone: <a href="tel:+918885091293">+91 88850 91293</a> · <a href="tel:+918008645679">+91 80086 45679</a></p>
         </div>
       </div>
     </section>
@@ -64,30 +59,12 @@
       <div class="container">
         <h2>Services</h2>
         <div class="grid-3">
-          <div class="feature">
-            <h3>Foam Wash</h3>
-            <p>Touch-less pre-wash, foam lance, underbody wash on hydraulic lift, blow-dry & tyre dressing.</p>
-          </div>
-          <div class="feature">
-            <h3>Interior Detailing</h3>
-            <p>Vacuum, steam sanitization, plastic/trim conditioning and odor treatment.</p>
-          </div>
-          <div class="feature">
-            <h3>Ceramic Coating</h3>
-            <p>9H ceramic protection with gloss enhancement and water beading.</p>
-          </div>
-          <div class="feature">
-            <h3>PPF</h3>
-            <p>Self-healing paint protection film for high-impact areas or full body.</p>
-          </div>
-          <div class="feature">
-            <h3>Accessories</h3>
-            <p>Seat covers, ambient lights, reverse camera, dash cam, floor mats and more.</p>
-          </div>
-          <div class="feature">
-            <h3>AC & Sanitization</h3>
-            <p>AC disinfection, cabin filter replacement and odour removal service.</p>
-          </div>
+          <div class="feature"><h3>Foam Wash</h3><p>Touch-less pre-wash, foam lance, underbody wash, blow-dry & tyre dressing.</p></div>
+          <div class="feature"><h3>Interior Detailing</h3><p>Vacuum + steam sanitization, leather/trim conditioning, odour treatment.</p></div>
+          <div class="feature"><h3>Ceramic Coating</h3><p>9H coating for deep gloss, UV protection, and hydrophobic beading.</p></div>
+          <div class="feature"><h3>PPF</h3><p>Self-healing paint protection film—per panel or full body.</p></div>
+          <div class="feature"><h3>Accessories</h3><p>Seat covers, audio upgrades, ambient lighting, cameras, floor mats.</p></div>
+          <div class="feature"><h3>AC & Sanitization</h3><p>AC disinfection, cabin filter replacement and odour removal.</p></div>
         </div>
       </div>
     </section>
@@ -95,24 +72,12 @@
     <section id="pricing" class="section alt">
       <div class="container narrow">
         <h2>Sample Pricing</h2>
-        <p class="muted">Indicative only — confirm at the shop based on vehicle size/condition.</p>
+        <p class="muted">Indicative prices — confirm at the shop based on vehicle size/condition.</p>
         <div class="price-table">
-          <div class="price">
-            <h3>Foam Wash</h3>
-            <p class="amt">₹499–799</p>
-          </div>
-          <div class="price">
-            <h3>Interior Detail</h3>
-            <p class="amt">₹1499–2499</p>
-          </div>
-          <div class="price">
-            <h3>Ceramic (per coat)</h3>
-            <p class="amt">from ₹6999</p>
-          </div>
-          <div class="price">
-            <h3>PPF (per panel)</h3>
-            <p class="amt">from ₹2499</p>
-          </div>
+          <div class="price"><h3>Foam Wash</h3><p class="amt">₹499–799</p></div>
+          <div class="price"><h3>Interior Detail</h3><p class="amt">₹1499–2499</p></div>
+          <div class="price"><h3>Ceramic (per coat)</h3><p class="amt">from ₹6999</p></div>
+          <div class="price"><h3>PPF (per panel)</h3><p class="amt">from ₹2499</p></div>
         </div>
       </div>
     </section>
@@ -121,12 +86,27 @@
       <div class="container">
         <h2>Gallery</h2>
         <div class="grid-3 thumbs">
-          <!-- Replace these with your real images -->
-          <img src="https://placehold.co/600x400?text=Foam+Wash" alt="Foam wash in progress">
-          <img src="https://placehold.co/600x400?text=Interior+Detail" alt="Interior detailing">
-          <img src="https://placehold.co/600x400?text=Ceramic+Coating" alt="Ceramic coating gloss">
+          <img src="images/gallery1.jpg" alt="Shop exterior and signboard">
+          <img src="images/gallery2.jpg" alt="Accessories counter and shelves">
+          <img src="images/gallery3.jpg" alt="Interior accessories display">
+          <img src="images/gallery4.jpg" alt="Detailing bay with red car">
         </div>
-        <p class="muted">Swap the placeholder images with your photos to showcase your work.</p>
+        <p class="muted">Replace files in <code>/images</code> using the same names to update this gallery.</p>
+      </div>
+    </section>
+
+    <section id="streetview" class="section">
+      <div class="container narrow">
+        <h2>360° Street View</h2>
+        <div class="map-embed">
+          <iframe 
+            src="https://www.google.com/maps/embed?pb=!4v1755096285549!6m8!1m7!1sCAoSFkNJSE0wb2dLRUlDQWdJRDMtdTJXY3c.!2m2!1d17.38549219543142!2d78.35678699716303!3f359.88742!4f0!5f0.7820865974627469"
+            width="100%" height="420" style="border:0;" allowfullscreen=""
+            loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div>
+        <p><a class="btn" target="_blank" rel="noopener"
+          href="https://www.google.com/maps/embed?pb=!4v1755096285549!6m8!1m7!1sCAoSFkNJSE0wb2dLRUlDQWdJRDMtdTJXY3c.!2m2!1d17.38549219543142!2d78.35678699716303!3f359.88742!4f0!5f0.7820865974627469">Open 360° in Google</a></p>
       </div>
     </section>
 
@@ -153,8 +133,6 @@
   <footer class="site-footer">
     <div class="container">
       <p>© <span id="year"></span> Express Car Care & Accessories</p>
-      <!-- Optional: add your Instagram/Facebook links -->
-      <!-- <a href="https://instagram.com/yourhandle" target="_blank" rel="noopener">Instagram</a> -->
     </div>
   </footer>
 
