@@ -3,75 +3,161 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Welcome – Ratna Kumar</title>
-  <style>
-    :root {
-      --primary-color: #2c3e50;
-      --accent-color: #3498db;
-      --text-color: #333;
-      --bg-color: #f9f9f9;
-      --font-stack: 'Segoe UI', Tahoma, sans-serif;
-    }
-    body {
-      margin: 0;
-      font-family: var(--font-stack);
-      background-color: var(--bg-color);
-      color: var(--text-color);
-      display: flex;
-      flex-direction: column;
-      min-height: 100vh;
-    }
-    header, footer {
-      background: var(--primary-color);
-      color: white;
-      padding: 1rem;
-      text-align: center;
-    }
-    main {
-      flex: 1;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 2rem;
-    }
-    .card {
-      background: white;
-      padding: 2rem 3rem;
-      border-radius: 8px;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-      text-align: center;
-      max-width: 400px;
-      width: 100%;
-    }
-    .card h1 {
-      color: var(--accent-color);
-      margin-bottom: 1rem;
-    }
-    .card p {
-      font-size: 1.1rem;
-      margin: 0;
-    }
-  </style>
+  <title>Express Car Care & Accessories — Narsingi, Hyderabad</title>
+  <meta name="description" content="Premium foam wash, interior detailing, PPF, ceramic coating, and car accessories in Narsingi, Hyderabad." />
+  <meta name="theme-color" content="#0ea5e9">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🚗</text></svg>">
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <header>
-    <h2>Express Car Care & Accessories</h2>
+  <header class="site-header">
+    <div class="container">
+      <a class="logo" href="#">Express Car Care</a>
+      <nav class="nav" aria-label="Primary">
+        <a href="#services">Services</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#contact" class="btn">Call / WhatsApp</a>
+      </nav>
+      <button class="menu" aria-label="Toggle menu" onclick="toggleMenu()">☰</button>
+    </div>
   </header>
 
-  <main>
-    <div class="card">
-      <h1>Hi 👋</h1>
-      <p>This page is owned by <strong>Ratna Kumar</strong>.</p>
-    </div>
+  <main id="main">
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <h1>Express Car Care & Accessories</h1>
+          <p class="lead">Foam Wash • Interior Detailing • PPF • Ceramic Coating • Accessories</p>
+          <ul class="badges">
+            <li>Hydraulic lift foam wash</li>
+            <li>Interior deep clean</li>
+            <li>Paint Protection Film</li>
+            <li>9H ceramic coating</li>
+            <li>Seat covers & more</li>
+          </ul>
+          <div class="cta">
+            <!-- Update numbers if needed -->
+            <a class="btn" href="tel:+918885091293">Call +91 88850 91293</a>
+            <a class="btn ghost" href="https://wa.me/918885091293" target="_blank" rel="noopener">WhatsApp</a>
+          </div>
+          <p class="hours">Open daily: 10:00–21:00</p>
+        </div>
+
+        <div class="card">
+          <h2>Visit Us</h2>
+          <p>
+            Plot No. 41, Vivekanand Nagar, Narsingi<br>
+            Hyderabad, Telangana 500075
+          </p>
+          <!-- Replace with your Google Maps link if different -->
+          <a class="btn full" href="https://maps.google.com" target="_blank" rel="noopener">Get Directions</a>
+          <div class="mini">
+            <a href="tel:+918885091293">+91 88850 91293</a> ·
+            <a href="tel:+918008645679">+91 80086 45679</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="services" class="section">
+      <div class="container">
+        <h2>Services</h2>
+        <div class="grid-3">
+          <div class="feature">
+            <h3>Foam Wash</h3>
+            <p>Touch-less pre-wash, foam lance, underbody wash on hydraulic lift, blow-dry & tyre dressing.</p>
+          </div>
+          <div class="feature">
+            <h3>Interior Detailing</h3>
+            <p>Vacuum, steam sanitization, plastic/trim conditioning and odor treatment.</p>
+          </div>
+          <div class="feature">
+            <h3>Ceramic Coating</h3>
+            <p>9H ceramic protection with gloss enhancement and water beading.</p>
+          </div>
+          <div class="feature">
+            <h3>PPF</h3>
+            <p>Self-healing paint protection film for high-impact areas or full body.</p>
+          </div>
+          <div class="feature">
+            <h3>Accessories</h3>
+            <p>Seat covers, ambient lights, reverse camera, dash cam, floor mats and more.</p>
+          </div>
+          <div class="feature">
+            <h3>AC & Sanitization</h3>
+            <p>AC disinfection, cabin filter replacement and odour removal service.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="pricing" class="section alt">
+      <div class="container narrow">
+        <h2>Sample Pricing</h2>
+        <p class="muted">Indicative only — confirm at the shop based on vehicle size/condition.</p>
+        <div class="price-table">
+          <div class="price">
+            <h3>Foam Wash</h3>
+            <p class="amt">₹499–799</p>
+          </div>
+          <div class="price">
+            <h3>Interior Detail</h3>
+            <p class="amt">₹1499–2499</p>
+          </div>
+          <div class="price">
+            <h3>Ceramic (per coat)</h3>
+            <p class="amt">from ₹6999</p>
+          </div>
+          <div class="price">
+            <h3>PPF (per panel)</h3>
+            <p class="amt">from ₹2499</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="gallery" class="section">
+      <div class="container">
+        <h2>Gallery</h2>
+        <div class="grid-3 thumbs">
+          <!-- Replace these with your real images -->
+          <img src="https://placehold.co/600x400?text=Foam+Wash" alt="Foam wash in progress">
+          <img src="https://placehold.co/600x400?text=Interior+Detail" alt="Interior detailing">
+          <img src="https://placehold.co/600x400?text=Ceramic+Coating" alt="Ceramic coating gloss">
+        </div>
+        <p class="muted">Swap the placeholder images with your photos to showcase your work.</p>
+      </div>
+    </section>
+
+    <section id="contact" class="section">
+      <div class="container narrow">
+        <h2>Contact</h2>
+        <form class="contact-form" onsubmit="return submitForm(event)">
+          <label> Your Name
+            <input required placeholder="Your name">
+          </label>
+          <label> Phone / Email
+            <input required placeholder="Phone or email">
+          </label>
+          <label> Message
+            <textarea rows="4" required placeholder="What do you need?"></textarea>
+          </label>
+          <button class="btn" type="submit">Send via WhatsApp</button>
+          <p id="status" class="status"></p>
+        </form>
+      </div>
+    </section>
   </main>
 
-  <footer>
-    &copy; <span id="year"></span> Ratna Kumar. All rights reserved.
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="year"></span> Express Car Care & Accessories</p>
+      <!-- Optional: add your Instagram/Facebook links -->
+      <!-- <a href="https://instagram.com/yourhandle" target="_blank" rel="noopener">Instagram</a> -->
+    </div>
   </footer>
 
-  <script>
-    // Set the current year automatically
-    document.getElementById("year").textContent = new Date().getFullYear();
-  </script>
+  <script src="script.js"></script>
 </body>
 </html>
