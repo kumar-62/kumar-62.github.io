@@ -15,11 +15,8 @@ function submitForm(e){
     return false;
   }
 
-  // Update WhatsApp number if needed
-  const waNumber = '918885091293';
-  const text = encodeURIComponent(
-    `Inquiry from ${name} (${contact}):%0A%0A${message}`
-  );
+  const waNumber = '918885091293'; // change if needed
+  const text = encodeURIComponent(`Inquiry from ${name} (${contact}):%0A%0A${message}`);
   window.open(`https://wa.me/${waNumber}?text=${text}`, '_blank');
   document.getElementById('status').textContent = 'Opening WhatsApp...';
   form.reset();
