@@ -46,25 +46,38 @@ Contact: ${contact}
 Message: ${message}`;
 
     const url = `https://wa.me/${toNumber}?text=${encodeURIComponent(text)}`;
-    status.textContent = 'Opening WhatsApp…';
+    if (status) status.textContent = 'Opening WhatsApp…';
     window.open(url, '_blank', 'noopener');
     return false;
   };
 
   // Reveal on scroll (features, prices, gallery, results, testimonials)
-  const io = new IntersectionObserver(entries => {
-    entries.forEach(e => {
-      if (e.isIntersecting) {
-        e.target.classList.add('reveal');
-        io.unobserve(e.target);
-      }
-    });
-  }, { threshold: 0.12 });
+  try {
+    const io = new IntersectionObserver(entries => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          e.target.classList.add('reveal');
+          io.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.12 });
 
-  document.querySelectorAll('.feature, .price, .thumbs img, .ba, .t-card').forEach(el => {
-    el.classList.add('reveal-init');
-    io.observe(el);
-  });
+    document.querySelectorAll('.feature, .price, .thumbs img, .ba, .t-card').forEach(el => {
+      el.classList.add('reveal-init');
+      io.observe(el);
+    });
+
+    // Extra safety: if nothing revealed in 500ms (e.g., some edge errors), force-show testimonials
+    setTimeout(() => {
+      document.querySelectorAll('#reviews .t-card').forEach(el => el.classList.add('reveal'));
+    }, 500);
+  } catch (err) {
+    // If IntersectionObserver fails for any reason, just show everything
+    document.querySelectorAll('.feature, .price, .thumbs img, .ba, .t-card').forEach(el => {
+      el.classList.remove('reveal-init');
+      el.classList.add('reveal');
+    });
+  }
 
   // ===== Before/After slider init =====
   function initBeforeAfter() {
@@ -89,7 +102,7 @@ Message: ${message}`;
         if (e.target === range) return;
         const rect = w.getBoundingClientRect();
         const pct = ((e.clientX - rect.left) / rect.width) * 100;
-        range.value = pct.toFixed(0);
+        range.value = Math.max(0, Math.min(100, Math.round(pct)));
         set(range.value);
       });
 
