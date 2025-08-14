@@ -43,8 +43,8 @@ img{max-width:100%;display:block;border-radius:12px}
   display:flex; align-items:center; justify-content:space-between;
   gap:12px; padding:14px 0;
 }
-.logo{display:flex; align-items:center; gap:12px}
-.logo img{height:64px; width:64px; object-fit:contain; filter: drop-shadow(0 4px 12px rgba(0,0,0,.35))}
+.logo{display:flex; align-items:center; gap:6px}
+.logo img{height:128px; width:128px; object-fit:contain; filter: drop-shadow(0 4px 12px rgba(0,0,0,.35))}
 .wordmark{
   font-family:"Bebas Neue", system-ui, sans-serif;
   letter-spacing:1px; font-size: clamp(20px, 3.5vw, 28px);
