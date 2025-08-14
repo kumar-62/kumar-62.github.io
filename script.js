@@ -1,4 +1,4 @@
-// Mobile menu toggle + accessibility
+// Mobile menu toggle + accessibility + site interactions
 (function () {
   const menuBtn = document.querySelector('.menu');
   const nav = document.getElementById('primary-nav');
@@ -67,8 +67,39 @@ Message: ${message}`;
     });
   }, { threshold: 0.12 });
 
-  document.querySelectorAll('.feature, .price, .thumbs img').forEach(el => {
+  document.querySelectorAll('.feature, .price, .thumbs img, .ba').forEach(el => {
     el.classList.add('reveal-init');
     io.observe(el);
   });
+
+  // ===== Before/After slider init =====
+  function initBeforeAfter() {
+    const widgets = document.querySelectorAll('[data-ba]');
+    widgets.forEach(w => {
+      const range = w.querySelector('.ba__range');
+      const set = (pct) => {
+        // clamp 0..100 and set CSS var
+        const v = Math.max(0, Math.min(100, Number(pct) || 0));
+        w.style.setProperty('--ba', v);
+      };
+      // init
+      set(range.value || 50);
+
+      // drag thumb
+      range.addEventListener('input', e => set(e.target.value));
+
+      // click anywhere to jump the handle
+      w.addEventListener('pointerdown', e => {
+        if (e.target === range) return;
+        const rect = w.getBoundingClientRect();
+        const pct = ((e.clientX - rect.left) / rect.width) * 100;
+        range.value = pct.toFixed(0);
+        set(range.value);
+      });
+
+      // keep handle aligned on resize
+      window.addEventListener('resize', () => set(range.value));
+    });
+  }
+  initBeforeAfter();
 })();
