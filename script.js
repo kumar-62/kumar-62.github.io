@@ -57,7 +57,7 @@ Message: ${message}`;
     return false;
   };
 
-  // Reveal on scroll (features, prices, gallery)
+  // Reveal on scroll (features, prices, gallery, results)
   const io = new IntersectionObserver(entries => {
     entries.forEach(e => {
       if (e.isIntersecting) {
@@ -77,11 +77,13 @@ Message: ${message}`;
     const widgets = document.querySelectorAll('[data-ba]');
     widgets.forEach(w => {
       const range = w.querySelector('.ba__range');
+      if (!range) return;
+
       const set = (pct) => {
-        // clamp 0..100 and set CSS var
         const v = Math.max(0, Math.min(100, Number(pct) || 0));
         w.style.setProperty('--ba', v);
       };
+
       // init
       set(range.value || 50);
 
