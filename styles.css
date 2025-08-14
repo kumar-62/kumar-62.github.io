@@ -43,8 +43,8 @@ img{max-width:100%;display:block;border-radius:12px}
   display:flex; align-items:center; justify-content:space-between;
   gap:12px; padding:14px 0;
 }
-.logo{display:flex; align-items:center; gap:6px}
-.logo img{height:128px; width:128px; object-fit:contain; filter: drop-shadow(0 4px 12px rgba(0,0,0,.35))}
+.logo{display:flex; align-items:center; gap:12px}
+.logo img{height:64px; width:64px; object-fit:contain; filter: drop-shadow(0 4px 12px rgba(0,0,0,.35))}
 .wordmark{
   font-family:"Bebas Neue", system-ui, sans-serif;
   letter-spacing:1px; font-size: clamp(20px, 3.5vw, 28px);
@@ -73,7 +73,6 @@ img{max-width:100%;display:block;border-radius:12px}
   object-fit:cover; object-position:center;
   filter:saturate(105%) contrast(105%) brightness(.85);
 }
-/* slightly darker gradient for stronger text contrast */
 .hero-video .hero-overlay{
   position:relative; z-index:1; background:linear-gradient(180deg, rgba(11,15,20,.75), rgba(11,15,20,.40) 40%, rgba(11,15,20,.75));
   display:flex; align-items:center; padding:72px 0 36px;
@@ -178,13 +177,14 @@ input,textarea,select{
 
 /* ===== Before/After Slider ===== */
 .ba{
-  --ba: 50; /* initial reveal % of AFTER side */
+  --ba: 50;            /* initial reveal % of AFTER side */
+  --ar: 4/3;           /* default aspect ratio; override inline e.g., style="--ar: 9/16" */
   position:relative;
   border:1px solid var(--line);
   border-radius:14px;
   overflow:hidden;
   background:#0a0f16;
-  aspect-ratio:4/3; /* change to 16/9 if your shots are widescreen */
+  aspect-ratio: var(--ar);
 }
 .ba__img{
   position:absolute; inset:0;
@@ -256,7 +256,7 @@ input,textarea,select{
 }
 @media (max-width:768px){
   .hero-video{min-height:92vh}
-  .hero-video video{object-position:50% 30%} /* shift focus higher on mobile */
+  .hero-video video{object-position:50% 30%}
 }
 @media (max-width:620px){
   .nav{display:none}
