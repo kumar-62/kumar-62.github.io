@@ -24,12 +24,12 @@
   <meta name="twitter:card" content="summary_large_image">
 
   <!-- CSS -->
-  <link rel="preload" href="styles.css" as="style">
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
 
+  <!-- Header -->
   <header class="site-header" role="banner">
     <div class="container">
       <a class="logo" href="/" aria-label="Express Car Care & Accessories">
@@ -62,7 +62,9 @@
           <div>
             <h1><span class="brand">EXPRESS</span> Car Care & Accessories</h1>
             <p class="lead">Foam Wash • Interior Detailing • PPF • Ceramic Coating • Accessories</p>
+
             <p class="social-proof">⭐ 4.8 on Google • 1,200+ cars detailed • Since 2022</p>
+
             <ul class="badges">
               <li>Hydraulic-lift underbody wash</li>
               <li>Interior deep clean & steam</li>
@@ -70,10 +72,12 @@
               <li>9H ceramic protection</li>
               <li>Seat covers & audio</li>
             </ul>
+
             <div class="cta">
               <a class="btn" href="tel:+918885091293">Call +91 88850 91293</a>
               <a class="btn ghost" href="https://wa.me/918885091293" target="_blank" rel="noopener">WhatsApp</a>
             </div>
+
             <p class="hours">Open daily: 10:00–21:00</p>
           </div>
 
@@ -82,7 +86,9 @@
             <p>Plot No. 41, Vivekanand Nagar, Narsingi<br>Hyderabad, Telangana 500075</p>
             <a class="btn full"
               href="https://www.google.com/maps/dir/?api=1&destination=Express%20Car%20Care%20%26%20Accessories%2C%20Plot%20No.%2041%2C%20Vivekanand%20Nagar%2C%20Narsingi%2C%20Hyderabad%20500075&travelmode=driving"
-              target="_blank" rel="noopener">Get Directions</a>
+              target="_blank" rel="noopener">
+              Get Directions
+            </a>
             <p class="mini">Phone: <a href="tel:+918885091293">+91 88850 91293</a> · <a href="tel:+918008645679">+91 80086 45679</a></p>
           </div>
         </div>
@@ -123,15 +129,15 @@
       <div class="container">
         <h2>Gallery</h2>
         <div class="grid-3 thumbs">
-          <img src="gallery1.JPG" alt="Shop exterior and signboard" loading="lazy">
-          <img src="gallery2.JPG" alt="Accessories counter and shelves" loading="lazy">
-          <img src="gallery3.JPG" alt="Interior accessories display" loading="lazy">
-          <img src="gallery4.JPG" alt="Detailing bay with red car" loading="lazy">
+          <img src="gallery1.JPG" alt="Shop exterior and signboard" loading="lazy" decoding="async">
+          <img src="gallery2.JPG" alt="Accessories counter and shelves" loading="lazy" decoding="async">
+          <img src="gallery3.JPG" alt="Interior accessories display" loading="lazy" decoding="async">
+          <img src="gallery4.JPG" alt="Detailing bay with red car" loading="lazy" decoding="async">
         </div>
       </div>
     </section>
 
-    <!-- Results -->
+    <!-- Results: Before/After Sliders -->
     <section id="results" class="section alt">
       <div class="container">
         <h2>Before / After — Our Work</h2>
@@ -139,24 +145,24 @@
 
         <!-- Dent Repair -->
         <figure class="ba reveal-init" data-ba>
-          <img class="ba__img ba__img--before" src="before_dent.jpg" alt="Before dent repair">
-          <img class="ba__img ba__img--after"  src="after_dent.jpg"  alt="After dent repair">
-          <div class="ba__handle"></div>
-          <input class="ba__range" type="range" min="0" max="100" value="50">
-          <div class="ba__labels">
+          <img class="ba__img ba__img--before" src="before_dent.jpg" alt="Before dent repair" loading="lazy" decoding="async">
+          <img class="ba__img ba__img--after"  src="after_dent.jpg"  alt="After dent repair"  loading="lazy" decoding="async">
+          <div class="ba__handle" aria-hidden="true"></div>
+          <input class="ba__range" type="range" min="0" max="100" value="50" aria-label="Reveal after result">
+          <div class="ba__labels" aria-hidden="true">
             <span class="ba__label ba__label--before">Before</span>
             <span class="ba__label ba__label--after">After</span>
           </div>
           <figcaption class="ba__caption"><strong>Dent Repair</strong></figcaption>
         </figure>
 
-        <!-- Flood Restoration -->
+        <!-- Flood Restoration (portrait) -->
         <figure class="ba reveal-init" data-ba style="--ar: 9/16;">
-          <img class="ba__img ba__img--before" src="IMG_3903.jpeg" alt="Before flood restoration">
-          <img class="ba__img ba__img--after"  src="IMG_3901.jpeg" alt="After flood restoration">
-          <div class="ba__handle"></div>
-          <input class="ba__range" type="range" min="0" max="100" value="50">
-          <div class="ba__labels">
+          <img class="ba__img ba__img--before" src="IMG_3903.jpeg" alt="Before flood restoration (waterlogged interior)" loading="lazy" decoding="async">
+          <img class="ba__img ba__img--after"  src="IMG_3901.jpeg" alt="After flood restoration (cleaned & dried)" loading="lazy" decoding="async">
+          <div class="ba__handle" aria-hidden="true"></div>
+          <input class="ba__range" type="range" min="0" max="100" value="50" aria-label="Reveal after result">
+          <div class="ba__labels" aria-hidden="true">
             <span class="ba__label ba__label--before">Before</span>
             <span class="ba__label ba__label--after">After</span>
           </div>
@@ -165,13 +171,68 @@
       </div>
     </section>
 
+    <!-- Testimonials -->
+    <section id="reviews" class="section">
+      <div class="container">
+        <h2>What Customers Say</h2>
+        <p class="muted" style="margin-bottom:18px">A couple of recent reviews from our customers.</p>
+
+        <div class="t-grid">
+          <!-- Review 1 -->
+          <article class="t-card reveal-init">
+            <div class="t-head">
+              <div class="avatar" aria-hidden="true">KK</div>
+              <div>
+                <strong class="t-name">Kiran Kranthi</strong>
+                <div class="stars" aria-label="5 stars">★★★★★</div>
+              </div>
+            </div>
+            <p class="t-body">
+              “Excellent work done by Shiva and team. They brought back life in my 10+ years old Ford Fiesta. The work done is very attention to detail. I really liked how the owner personally monitored each and every work, so that no dirt is left behind. Looking forward to many such things in future.”
+            </p>
+            <div class="t-meta">Full Detailing • Ford Fiesta</div>
+          </article>
+
+          <!-- Review 2 -->
+          <article class="t-card reveal-init">
+            <div class="t-head">
+              <div class="avatar" aria-hidden="true">RS</div>
+              <div>
+                <strong class="t-name">Ranjith Singh</strong>
+                <div class="stars" aria-label="5 stars">★★★★★</div>
+              </div>
+            </div>
+            <p class="t-body">
+              “I recently had my car washed and cleaned, and I couldn’t be happier with the results! The team did an exceptional job, leaving my car spotless inside and out. The exterior gleamed like it just came out of the showroom, and the interior was meticulously detailed, with no dust or stains in sight. Narsingi’s best for sure!”
+            </p>
+            <div class="t-meta">Wash & Detailing • Hyundai i20</div>
+          </article>
+        </div>
+
+        <div class="t-cta">
+          <a class="btn ghost t-google" href="https://www.google.com/maps?q=Express+Car+Care+%26+Accessories+Narsingi" target="_blank" rel="noopener">
+            <svg class="gmark" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">
+              <path fill="#4285F4" d="M12 10.2v3.6h5.1c-.2 1.2-1.5 3.6-5.1 3.6A5.4 5.4 0 1 1 12 4.8c1.5 0 2.6.6 3.2 1.2l2.2-2.2A9.1 9.1 0 0 0 12 3a9 9 0 1 0 0 18c5.4 0 9-3.8 9-9 0-.6-.1-1.2-.2-1.8H12z"/>
+            </svg>
+            Read more on Google
+          </a>
+        </div>
+      </div>
+    </section>
+
     <!-- Street View -->
     <section id="streetview" class="section">
       <div class="container narrow">
         <h2>360° Street View</h2>
         <div class="map-embed">
-          <iframe src="https://www.google.com/maps/embed?pb=!4v1755096285549!6m8!1m7!1sCAoSFkNJSE0wb2dLRUlDQWdJRDMtdTJXY3c.!2m2!1d17.38549219543142!2d78.35678699716303!3f359.88742!4f0!5f0.7820865974627469" width="100%" height="420" style="border:0;" allowfullscreen></iframe>
+          <iframe 
+            src="https://www.google.com/maps/embed?pb=!4v1755096285549!6m8!1m7!1sCAoSFkNJSE0wb2dLRUlDQWdJRDMtdTJXY3c.!2m2!1d17.38549219543142!2d78.35678699716303!3f359.88742!4f0!5f0.7820865974627469"
+            width="100%" height="420" style="border:0;" allowfullscreen=""
+            loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
         </div>
+        <p><a class="btn" target="_blank" rel="noopener"
+          href="https://www.google.com/maps/embed?pb=!4v1755096285549!6m8!1m7!1sCAoSFkNJSE0wb2dLRUlDQWdJRDMtdTJXY3c.!2m2!1d17.38549219543142!2d78.35678699716303!3f359.88742!4f0!5f0.7820865974627469">Open 360° in Google</a></p>
       </div>
     </section>
 
@@ -180,9 +241,15 @@
       <div class="container narrow">
         <h2>Contact</h2>
         <form class="contact-form" onsubmit="return submitForm(event)">
-          <label>Your Name<input required placeholder="Your name"></label>
-          <label>Phone / Email<input required placeholder="Phone or email"></label>
-          <label>Message<textarea rows="4" required placeholder="What do you need?"></textarea></label>
+          <label> Your Name
+            <input required placeholder="Your name">
+          </label>
+          <label> Phone / Email
+            <input required placeholder="Phone or email">
+          </label>
+          <label> Message
+            <textarea rows="4" required placeholder="What do you need?"></textarea>
+          </label>
           <button class="btn" type="submit">Send via WhatsApp</button>
           <p id="status" class="status"></p>
         </form>
@@ -190,10 +257,10 @@
     </section>
   </main>
 
-  <!-- Sticky actions -->
-  <div class="sticky-actions">
+  <!-- Sticky actions (mobile) -->
+  <div class="sticky-actions" aria-label="Quick actions">
     <a href="tel:+918885091293">Call</a>
-    <a href="https://wa.me/918885091293" target="_blank">WhatsApp</a>
+    <a href="https://wa.me/918885091293" target="_blank" rel="noopener">WhatsApp</a>
     <a href="#contact">Book</a>
   </div>
 
@@ -202,6 +269,34 @@
       <p>© <span id="year"></span> Express Car Care & Accessories</p>
     </div>
   </footer>
+
+  <!-- LocalBusiness Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "AutoRepair",
+    "name": "Express Car Care & Accessories",
+    "image": "https://www.expresscarcare.me/og-cover.jpg",
+    "url": "https://www.expresscarcare.me/",
+    "telephone": "+91 88850 91293",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Plot No. 41, Vivekanand Nagar, Narsingi",
+      "addressLocality": "Hyderabad",
+      "addressRegion": "Telangana",
+      "postalCode": "500075",
+      "addressCountry": "IN"
+    },
+    "geo": { "@type": "GeoCoordinates", "latitude": 17.385492, "longitude": 78.356787 },
+    "openingHoursSpecification": [{
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+      "opens": "10:00",
+      "closes": "21:00"
+    }],
+    "priceRange": "₹₹"
+  }
+  </script>
 
   <script src="script.js"></script>
 </body>
