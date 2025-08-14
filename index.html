@@ -41,6 +41,7 @@
         <a href="#services">Services</a>
         <a href="#pricing">Pricing</a>
         <a href="#gallery">Gallery</a>
+        <a href="#results">Results</a>
         <a href="#streetview">360° View</a>
         <a href="#contact" class="btn">Call / WhatsApp</a>
       </nav>
@@ -50,11 +51,11 @@
   </header>
 
   <main id="main">
-    <!-- HERO: premium video background (updated: poster + compressed video + preload) -->
+    <!-- HERO: premium video background (poster + compressed video + preload) -->
     <section class="hero-video" aria-label="Express Car Care highlights">
       <video autoplay muted loop playsinline preload="metadata" poster="hero-poster.jpg">
         <source src="gemini_generated_video_0A2924BB_compressed.mp4" type="video/mp4">
-        <!-- Fallback: show poster image if video unsupported -->
+        <!-- Fallback: poster will show if video unsupported -->
       </video>
 
       <div class="hero-overlay">
@@ -131,6 +132,31 @@
           <img src="gallery3.JPG" alt="Interior accessories display" loading="lazy" decoding="async">
           <img src="gallery4.JPG" alt="Detailing bay with red car" loading="lazy" decoding="async">
         </div>
+      </div>
+    </section>
+
+    <!-- NEW: Before/After results test slider -->
+    <section id="results" class="section alt">
+      <div class="container">
+        <h2>Before / After — Test</h2>
+        <p class="muted" style="margin-bottom:18px">Drag the handle to compare.</p>
+
+        <figure class="ba reveal-init" data-ba>
+          <img class="ba__img ba__img--before" src="before_dent.jpg" alt="Before dent repair" loading="lazy" decoding="async">
+          <img class="ba__img ba__img--after"  src="after_dent.jpg"  alt="After dent repair"  loading="lazy" decoding="async">
+
+          <div class="ba__handle" aria-hidden="true"></div>
+          <input class="ba__range" type="range" min="0" max="100" value="50" aria-label="Reveal after result">
+
+          <div class="ba__labels" aria-hidden="true">
+            <span class="ba__label ba__label--before">Before</span>
+            <span class="ba__label ba__label--after">After</span>
+          </div>
+
+          <figcaption class="ba__caption">
+            <strong>Dent Repair</strong><span>Precision panel restoration</span>
+          </figcaption>
+        </figure>
       </div>
     </section>
 
