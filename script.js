@@ -4,14 +4,8 @@
   const nav = document.getElementById('primary-nav');
 
   if (menuBtn && nav) {
-    const closeMenu = () => {
-      nav.style.display = 'none';
-      menuBtn.setAttribute('aria-expanded', 'false');
-    };
-    const openMenu = () => {
-      nav.style.display = 'flex';
-      menuBtn.setAttribute('aria-expanded', 'true');
-    };
+    const closeMenu = () => { nav.style.display = 'none'; menuBtn.setAttribute('aria-expanded', 'false'); };
+    const openMenu  = () => { nav.style.display = 'flex'; menuBtn.setAttribute('aria-expanded', 'true');  };
 
     menuBtn.addEventListener('click', () => {
       const open = nav.style.display === 'flex';
@@ -57,7 +51,7 @@ Message: ${message}`;
     return false;
   };
 
-  // Reveal on scroll (features, prices, gallery, results)
+  // Reveal on scroll (features, prices, gallery, results, testimonials)
   const io = new IntersectionObserver(entries => {
     entries.forEach(e => {
       if (e.isIntersecting) {
@@ -67,7 +61,7 @@ Message: ${message}`;
     });
   }, { threshold: 0.12 });
 
-  document.querySelectorAll('.feature, .price, .thumbs img, .ba').forEach(el => {
+  document.querySelectorAll('.feature, .price, .thumbs img, .ba, .t-card').forEach(el => {
     el.classList.add('reveal-init');
     io.observe(el);
   });
