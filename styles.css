@@ -169,9 +169,11 @@ input,textarea,select{
 /* ===== Anchor offset ===== */
 :where(#services, #pricing, #gallery, #results, #reviews, #streetview, #contact){ scroll-margin-top: 84px; }
 
-/* ===== Reveal on scroll ===== */
-.reveal-init{transform:translateY(8px);opacity:0}
-.reveal{transform:none;opacity:1;transition:transform .45s ease,opacity .45s ease}
+/* ===== Reveal on scroll (safe default visible) ===== */
+.reveal-init{transform:translateY(8px);}       /* no opacity:0 — safe if JS fails */
+.reveal{transform:none; opacity:1; transition:transform .45s ease, opacity .45s ease}
+/* Ensure testimonials never hide if JS fails */
+#reviews .t-card.reveal-init{opacity:1; transform:none}
 
 /* ===== Before/After Slider ===== */
 .ba{
@@ -203,7 +205,7 @@ input,textarea,select{
 .ba__label--after{  background: rgba(225,29,72,.18) }
 .ba__caption{position:absolute; left:10px; top:10px; background:rgba(0,0,0,.35); color:#fff; border:1px solid var(--line); border-radius:10px; padding:6px 10px; font-size:14px}
 
-/* ===== Testimonials (compact) ===== */
+/* ===== Testimonials (compact + modern) ===== */
 .t-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:14px}
 .t-card{
   border:1px solid var(--line); background:var(--bg-elev);
@@ -211,7 +213,7 @@ input,textarea,select{
   transition:transform .25s ease, box-shadow .25s ease;
 }
 .t-card:hover{ transform:translateY(-2px); box-shadow:0 10px 28px rgba(0,0,0,.24) }
-.t-head{ display:flex; align-items:center; gap:10px; margin-bottom:8px }
+.t-head{ display:flex; align-items:center; gap:10px; margin-bottom:6px }
 .avatar{ width:36px; height:36px; border-radius:50%; display:grid; place-items:center; font-weight:800; background:rgba(225,29,72,.18); border:1px solid var(--line) }
 .t-name{ display:block }
 .t-stars{ display:flex; gap:2px; margin-top:2px }
